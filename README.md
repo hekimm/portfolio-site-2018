@@ -26,7 +26,7 @@ HTML5 · CSS3 · Vanilla JavaScript
 
 ## Ekran görüntüsü
 
-![screenshot](images/screenshot.png)
+![screenshot](images/screenshot.jpg)
 
 ## Lisans
 
