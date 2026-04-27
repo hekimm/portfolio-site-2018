@@ -1,0 +1,384 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ecf0f1;
+    color: #555555;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #3498db !important;
+}
+
+.hamburger {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #1a2a44 0%, #2c3e50 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    margin-top: -50px;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #ecf0f1;
+    font-weight: 400;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    font-size: 32px;
+    color: #ffffff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+/* Hakkımda Section */
+.hakkimda-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* önce float ile yapmıştım, sonra flexbox öğrendim daha kolay */
+.hakkimda-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-photo {
+    flex: 0 0 200px;
+    margin-right: 50px;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+}
+
+.hakkimda-text {
+    flex: 1;
+}
+
+.hakkimda-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Yetenekler Section */
+.yetenekler-section {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.skill-percent {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #d5d8dc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Projeler Section */
+.projeler-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.projeler-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.proje-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proje-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2) !important;
+}
+
+.proje-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.proje-content {
+    padding: 20px;
+}
+
+.proje-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.proje-description {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.proje-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    float: right;
+    transition: color 0.3s;
+}
+
+.proje-link:hover {
+    color: #2980b9;
+}
+
+/* İletişim Section */
+.iletisim-section {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+}
+
+#iletisim-container {
+    text-align: center;
+}
+
+.iletisim-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.iletisim-icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 0 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.iletisim-icon:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.email-text {
+    text-align: center;
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hakkimda-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .hakkimda-text p {
+        text-align: left;
+    }
+    
+    .projeler-container {
+        flex-direction: column;
+    }
+    
+    .proje-card {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .iletisim-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}
